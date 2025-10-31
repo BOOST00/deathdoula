@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Client Color Palette: Professional and compassionate design
+    - CCC9DC: Soft lavender for backgrounds and accents
+    - 324A5F: Deep blue-gray for text and primary elements
+    - 7180AC: Medium blue-gray for secondary elements and borders
+    - 5299D3: Bright blue for primary actions and highlights
+  */
+  --background: #CCC9DC; /* Soft lavender background */
+  --foreground: #324A5F; /* Deep blue-gray for text */
+  --card: #FFFFFF; /* Clean white cards for contrast */
+  --card-foreground: #324A5F; /* Deep blue-gray text on white cards */
+  --popover: #FFFFFF;
+  --popover-foreground: #324A5F;
+  --primary: #5299D3; /* Bright blue for primary actions */
+  --primary-foreground: #FFFFFF; /* White text on primary buttons */
+  --secondary: #7180AC; /* Medium blue-gray for secondary elements */
+  --secondary-foreground: #FFFFFF; /* White text on secondary elements */
+  --muted: #B8B5D1; /* Lighter shade of lavender for section breaks */
+  --muted-foreground: #4A5A6B; /* Muted blue-gray text */
+  --accent: #A8A5C4; /* Medium lavender accent */
+  --accent-foreground: #324A5F;
+  --destructive: #C05746; /* Soft red for destructive actions */
+  --destructive-foreground: #FFFFFF;
+  --border: #7180AC; /* Medium blue-gray borders */
+  --input: #B8B5D1; /* Light lavender input backgrounds */
+  --ring: #5299D3; /* Bright blue focus rings */
+  --radius: 0.5rem;
+  --sidebar: #CCC9DC; /* Soft lavender sidebar */
+  --sidebar-foreground: #324A5F; /* Deep blue-gray sidebar text */
+  --sidebar-primary: #5299D3; /* Bright blue for primary sidebar elements */
+  --sidebar-primary-foreground: #FFFFFF; /* White text on sidebar primary elements */
+  --sidebar-accent: #7180AC; /* Medium blue-gray for sidebar accents */
+  --sidebar-accent-foreground: #FFFFFF; /* White text on sidebar accent elements */
+  --sidebar-border: #7180AC; /* Medium blue-gray sidebar borders */
+  --sidebar-ring: #5299D3; /* Bright blue sidebar focus rings */
+}
+
+.dark {
+  --background: #1A1F2E; /* Dark blue-gray background */
+  --foreground: #E8EAF0; /* Light blue-gray text */
+  --card: #2A3441; /* Darker blue-gray cards */
+  --card-foreground: #E8EAF0;
+  --popover: #2A3441;
+  --popover-foreground: #E8EAF0;
+  --primary: #5299D3; /* Same bright blue for consistency */
+  --primary-foreground: #FFFFFF;
+  --secondary: #4A5A6B; /* Muted blue-gray secondary */
+  --secondary-foreground: #E8EAF0;
+  --muted: #2A3441; /* Darker blue-gray muted */
+  --muted-foreground: #9CA3B0; /* Lighter muted text */
+  --accent: #3A4554; /* Darker accent */
+  --accent-foreground: #E8EAF0;
+  --destructive: #E57373; /* Clear red for dark mode */
+  --destructive-foreground: #1A1F2E;
+  --border: #4A5A6B; /* Medium blue-gray borders */
+  --input: #3A4554; /* Dark input backgrounds */
+  --ring: #5299D3; /* Bright blue focus rings */
+  --sidebar: #1A1F2E; /* Dark blue-gray sidebar */
+  --sidebar-foreground: #E8EAF0; /* Light blue-gray sidebar text */
+  --sidebar-primary: #5299D3; /* Bright blue for primary sidebar elements */
+  --sidebar-primary-foreground: #FFFFFF; /* White text on sidebar primary elements */
+  --sidebar-accent: #4A5A6B; /* Muted blue-gray for sidebar accents */
+  --sidebar-accent-foreground: #E8EAF0; /* Light blue-gray for sidebar accent text */
+  --sidebar-border: #4A5A6B; /* Medium blue-gray sidebar borders */
+  --sidebar-ring: #5299D3; /* Bright blue sidebar focus rings */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
